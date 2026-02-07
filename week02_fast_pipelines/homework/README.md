@@ -101,9 +101,7 @@ Run one epoch **without a backward pass** to measure the iteration time.
 Make sure you've [warmed up](https://forums.developer.nvidia.com/t/why-warm-up/48565) the GPU before computing the statistics and do not forget about asynchronous CUDA kernel execution.
 
 Keep in mind that all padding in this task must be **implemented by you**: unlike the seminar, PyTorch’s default collation padding is not allowed.
-In every subproblem, for sequences longer than 640 tokens, just truncate the overflowing part, except for FFD and OBFD where longer sequences should be dropped entirely (as specified in the algorithm descriptions).
-Since FFD and OBFD drop long sequences while other methods truncate them, ensure your timing comparisons are fair by accounting for the different number of samples processed.
-
+For all subproblems, drop all sequences exceeding 640 tokens.
 Feel free to modify the keyword arguments of functions.
 
 **Hint:** In the third subtask, you might want to use a hash table multiple times.
