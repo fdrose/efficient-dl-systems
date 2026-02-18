@@ -1,10 +1,10 @@
 import torch
 
 device = "cuda"
-dim = 4096
+dim = 2048
 
 A = torch.randn(dim, dim, device=device)
-B = torch.randn(dim, dim, device=device)
+B = torch.randn(dim, 2, device=device)
 
 torch.cuda.synchronize()
 
