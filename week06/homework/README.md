@@ -61,8 +61,6 @@ Enable fused optimizer.
 
 Implement async data loading with CUDA streams to overlap data transfer with compute.
 
----
-
 ## Part 2: Calculators and Comparisons (4 points)
 
 Implement calculators in `calculators.py` and analyze performance.
@@ -80,10 +78,6 @@ Measure using PyTorch:
 - `FlopCounterMode` for FLOPs
 - `torch.cuda.max_memory_allocated()` for peak memory
 - CUDA events for timing
-
-### 2.3 Comparison Analysis (1 point)
-
----
 
 ## Report and Analysis (2 points)
 
