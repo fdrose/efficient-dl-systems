@@ -8,8 +8,8 @@ Inefficiencies:
 1. Unfused RMSNorm (separate rms computation, division, scaling)
 2. Unfused RoPE (separate sin/cos computation and rotation)
 3. Unfused SwiGLU (separate silu and multiply kernels)
-4. Vanilla attention is used instead of Flash Attention
-5. Vanilla F.cross_entropy is used
+4. Vanilla attention and eparate Q/K/V projections instead of Flash Attention and fused QKV
+5. Separate lm_head + F.cross_entropy (instead of Fused Linear Cross Entropy)
 """
 
 import math
